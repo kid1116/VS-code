@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML练习4</title>
+    <style>
+      form label {
+        display: inline-block;
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="username">用户名:</label>
+      <input type="text" id="username" placeholder="请输入用户名" /><br /><br />
+
+      <label for="password">密码: </label>
+      <input type="password" id="password" placeholder="请输入密码"/><br /><br />
+
+      <label>性别:</label>
+      <input type="radio" id="male" name="gender" />男
+      <input type="radio" id="female" name="gender" />女
+      <input type="radio" id="secret" name="gender" />保密<br /><br />
+
+      <label>爱好：</label>
+      <input type="checkbox" id="reading" name="hobby" /> 阅读
+      <input type="checkbox" id="swimming" name="hobby" /> 游泳
+      <input type="checkbox" id="painting" name="hobby" /> 绘画<br /><br />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
