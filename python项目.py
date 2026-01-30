@@ -5,7 +5,7 @@ import pygame
 def run_game():
     # Initialize the game and create a screen object
     pygame.init()
-    screen = pygame.display.set_mode((800, 600))
+    screen = pygame.display.set_mode((1200,800))
     pygame.display.set_caption("Simple Pygame Example")
 
     # Main loop
@@ -15,7 +15,7 @@ def run_game():
                 sys.exit()
 
         # Fill the screen with a color (RGB)
-        screen.fill((0, 128, 128))
+        screen.fill((250,245,230))
 
         # Update the display
         pygame.display.flip()
