@@ -15,7 +15,7 @@ def run_game():
                 sys.exit()
 
         # Fill the screen with a color (RGB)
-        screen.fill((0, 128, 255))
+        screen.fill((0, 128, 128))
 
         # Update the display
         pygame.display.flip()
