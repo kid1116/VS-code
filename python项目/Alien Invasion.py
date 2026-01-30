@@ -1,10 +1,10 @@
-import sys
 import os
 import pygame
-import time
 
+import game_functions as gf
 from settings import Settings
 from ship import Ship
+
 
 #先清屏
 os.system("cls")
@@ -20,14 +20,12 @@ def run_game():
     screen.fill(ai_settings.bg_color)
 
     ship= Ship(screen)
-    ship.blitme()
-    pygame.display.flip()
 
     # 开始游戏的主循环
     while True:
-        #监视键盘和鼠标事件
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
+        gf.check_events()
+
+        ship.blitme()
+        pygame.display.flip()
 
 run_game()
