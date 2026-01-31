@@ -29,5 +29,3 @@ def check_events(ship):
         elif event.type == pygame.KEYUP: #松开键盘
             check_keyup_events(event,ship)
               
-        
-
