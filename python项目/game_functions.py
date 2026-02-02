@@ -9,8 +9,7 @@ def check_keydown_events(event,ai_settings,screen,ship,bullets):
     elif event.key == pygame.K_LEFT:
         ship.moving_left =True
     elif event.key == pygame.K_SPACE:
-        new_bullet = Bullet(ai_settings,screen,ship)
-        bullets.add(new_bullet)
+        fire_bullet(ai_settings,screen,ship,bullets)
 
 #松开键盘
 def check_keyup_events(event,ship):
@@ -36,4 +35,17 @@ def update_screen(ai_settings,screen,ship,bullets):
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     ship.blitme()
-    pygame.display.flip()             
+    pygame.display.flip()
+
+#删除已消失的子弹
+def update_bullets(bullets):
+    bullets.update()
+    for bullet in bullets.copy():
+        if bullet.rect.bottom <=0:
+            bullets.remove(bullet)
+
+#发射子弹检查
+def fire_bullet(ai_settings,screen,ship,bullets):
+    if len(bullets) < ai_settings.bullets_allowed:
+        new_bullet = Bullet(ai_settings,screen,ship)
+        bullets.add(new_bullet)

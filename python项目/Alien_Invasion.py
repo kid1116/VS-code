@@ -1,10 +1,10 @@
 import os
 import pygame
+from pygame.sprite import Group
 
 import game_functions as gf
 from settings import Settings
 from ship import Ship
-from pygame.sprite import Group
 
 #先清屏
 os.system("cls")
@@ -22,9 +22,9 @@ def run_game():
 
     #游戏主循环
     while True:
-        gf.check_events(ai_settings,screen,ship,bullets)
+        gf.check_events(ai_settings,screen,ship,bullets) 
         ship.update()
-        bullets.update()
+        gf.update_bullets(bullets)
         gf.update_screen(ai_settings,screen,ship,bullets)
-
+        
 run_game()
