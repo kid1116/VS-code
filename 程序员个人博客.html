@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoDev | 前卫程序员博客</title>
+    <script src="https://image.uc.cn/s/uae/g/3n/mos-production/fontawesome-free-7.1.0-web/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="https://image.uc.cn/s/uae/g/3n/mos-production/0915/3.4.17.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap');
+
+        /* 自定义CSS - 使用BEM命名法避免与Tailwind冲突 */
+        .hero-typing {
+            overflow: hidden;
+            border-right: .15em solid #d4af37;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #d4af37; }
+        }
+
+        .flip-card {
+            perspective: 1000px;
+            height: 300px;
+        }
+
+        .flip-card__inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card__inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card__front, .flip-card__back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .flip-card__back {
+            transform: rotateY(180deg);
+        }
+
+        .parallax-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 70%, rgba(0, 255, 157, 0.05) 0%, transparent 50%);
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+        }
+
+        .neon-border {
+            position: relative;
+            border: 2px solid transparent;
+            background: linear-gradient(#000, #000) padding-box,
+                        linear-gradient(45deg, #00ff9d, #ff2a6d, #d4af37) border-box;
+            animation: border-flow 3s linear infinite;
+        }
+
+        @keyframes border-flow {
+            0% { background: linear-gradient(#000, #000) padding-box,
+                            linear-gradient(45deg, #00ff9d, #ff2a6d, #d4af37) border-box; }
+            33% { background: linear-gradient(#000, #000) padding-box,
+                            linear-gradient(45deg, #ff2a6d, #d4af37, #00ff9d) border-box; }
+            66% { background: linear-gradient(#000, #000) padding-box,
+                            linear-gradient(45deg, #d4af37, #00ff9d, #ff2a6d) border-box; }
+            100% { background: linear-gradient(#000, #000) padding-box,
+                            linear-gradient(45deg, #00ff9d, #ff2a6d, #d4af37) border-box; }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #d4af37;
+        }
+
+        .slide-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .slide-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: #0a192f;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #d4af37, #f9d423);
+            width: 0;
+            transition: width 1.5s ease-out;
+        }
+
+        .code-terminal {
+            font-family: 'JetBrains Mono', monospace;
+            background: rgba(10, 25, 47, 0.8);
+            border-left: 4px solid #00ff9d;
+            padding: 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            position: relative;
+        }
+
+        .code-terminal::before {
+            content: '$';
+            position: absolute;
+            left: -1.5rem;
+            top: 1.5rem;
+            color: #00ff9d;
+            font-weight: bold;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -10;
+        }
+
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a192f;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#d4af37, #f9d423);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(#00ff9d, #ff2a6d);
+        }
+    </style>
+<script>
+!(function(j,a,g){j.__itrace_conf = {bid: 'kt40h0wl-koyh4af8',rel: '', uid: '5b4725d3-abcf-446a-bdda-f9504bea5c56' ,  spa: true, plugins:['jserror','interface','perf','resource','flow','blank']};var b = a.createElement("script");var d = a.getElementsByTagName("script")[0];b.type = "text/javascript";b.crossorigin = true;b.async = true;b.onload = function(){j.__itrace && j.__itrace.setReady()};d.parentNode.insertBefore(b,d);b.src = g})(window, document, "https://g.alicdn.com/woodpeckerx/itrace-next/itrace.iife.js")
+</script>
+</head>
+<body class="bg-black text-gray-300 font-sans">
+    <!-- 动态粒子背景 -->
+    <div id="particles-js"></div>
+
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold font-['Orbitron']">
+                <span class="text-white">Neo</span><span class="text-[#d4af37]">Dev</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="relative group text-white hover:text-[#d4af37] transition-colors duration-300">
+                    <span>首页</span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#d4af37] group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#about" class="relative group text-white hover:text-[#d4af37] transition-colors duration-300">
+                    <span>关于</span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#d4af37] group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#skills" class="relative group text-white hover:text-[#d4af37] transition-colors duration-300">
+                    <span>技能</span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#d4af37] group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#projects" class="relative group text-white hover:text-[#d4af37] transition-colors duration-300">
+                    <span>项目</span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#d4af37] group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#contact" class="relative group text-white hover:text-[#d4af37] transition-colors duration-300">
+                    <span>联系</span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#d4af37] group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+            <button id="theme-toggle" class="p-2 rounded-full bg-[#0a192f] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition-all duration-300">
+                <i class="fas fa-moon text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden parallax-section">
+        <div class="parallax-bg"></div>
+        <div class="container mx-auto px-6 text-center z-10">
+            <div class="mb-8 float-animation">
+                <div class="w-48 h-48 mx-auto rounded-full border-4 border-[#d4af37] p-2">
+                    <img src="https://agent.qianwen.com/mos/05536431112c440a9c40add17935039f/71caef974152aabfd46c4a9e1fd3ee26" 
+                         alt="程序员头像：卡通风格，戴黑框眼镜，穿着连帽衫，背景为代码矩阵，表情自信且技术感十足" 
+                         class="w-full h-full rounded-full object-cover">
+                </div>
+            </div>
+            <h1 class="hero-typing text-5xl md:text-7xl font-bold font-['Orbitron'] mb-6">
+                <span class="text-white">Hello, </span>
+                <span class="text-[#d4af37]">World</span>
+                <span class="text-[#00ff9d]">!</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                我是 <span class="text-[#ff2a6d] font-bold">Neo</span>，一名痴迷于
+                <span class="text-[#00ff9d]">前沿技术</span> 与
+                <span class="text-[#d4af37]">极致体验</span> 的全栈开发者。
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-[#d4af37] to-[#f9d423] text-black font-bold rounded-full hover:scale-105 transition-transform duration-300 shadow-lg shadow-[#d4af37]/30">
+                    探索项目
+                </a>
+                <a href="#contact" class="px-8 py-3 neon-border text-white font-bold rounded-full hover:scale-105 transition-transform duration-300">
+                    联系我
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于区域 -->
+    <section id="about" class="py-20 bg-gradient-to-b from-black to-[#0a192f]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold font-['Orbitron'] mb-12 text-center">
+                <span class="text-white">关于</span>
+                <span class="text-[#d4af37]">我</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center slide-in">
+                <div class="code-terminal">
+                    <p class="mb-4"><span class="text-[#00ff9d]">$</span> whoami</p>
+                    <p class="text-[#d4af37] mb-6">> Full-Stack Developer & Tech Explorer</p>
+                    
+                    <p class="mb-4"><span class="text-[#00ff9d]">$</span> cat bio.txt</p>
+                    <p class="mb-3">> 拥有8年全栈开发经验，专注于构建高性能、可扩展的Web应用。</p>
+                    <p class="mb-3">> 技术栈覆盖现代前端框架、云原生架构与机器学习部署。</p>
+                    <p class="mb-6">> 热衷于探索技术边界，并将复杂问题转化为优雅的代码解决方案。</p>
+                    
+                    <p class="mb-4"><span class="text-[#00ff9d]">$</span> find /interests -name "*.passion"</p>
+                    <div class="flex flex-wrap gap-3 mt-4">
+                        <span class="px-4 py-2 bg-[#0a192f] border border-[#00ff9d] rounded-full text-[#00ff9d]">WebGL</span>
+                        <span class="px-4 py-2 bg-[#0a192f] border border-[#ff2a6d] rounded-full text-[#ff2a6d]">AI/ML</span>
+                        <span class="px-4 py-2 bg-[#0a192f] border border-[#d4af37] rounded-full text-[#d4af37]">DevOps</span>
+                        <span class="px-4 py-2 bg-[#0a192f] border border-white rounded-full text-white">开源</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="p-6 bg-black/50 border border-gray-800 rounded-xl hover:border-[#d4af37] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-[#0a192f] flex items-center justify-center mr-4">
+                                <i class="fas fa-graduation-cap text-[#d4af37] text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">教育背景</h3>
+                        </div>
+                        <p class="text-gray-400">计算机科学硕士 - 斯坦福大学</p>
+                        <p class="text-sm text-gray-500">研究方向：分布式系统与人工智能</p>
+                    </div>
+                    
+                    <div class="p-6 bg-black/50 border border-gray-800 rounded-xl hover:border-[#00ff9d] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-[#0a192f] flex items-center justify-center mr-4">
+                                <i class="fas fa-briefcase text-[#00ff9d] text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">职业经历</h3>
+                        </div>
+                        <p class="text-gray-400">前首席架构师 - TechVision Inc.</p>
+                        <p class="text-sm text-gray-500">领导20人团队，构建千万级用户平台</p>
+                    </div>
+                    
+                    <div class="p-6 bg-black/50 border border-gray-800 rounded-xl hover:border-[#ff2a6d] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-[#0a192f] flex items-center justify-center mr-4">
+                                <i class="fas fa-trophy text-[#ff2a6d] text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">荣誉成就</h3>
+                        </div>
+                        <p class="text-gray-400">3次获得"年度创新技术奖"</p>
+                        <p class="text-sm text-gray-500">15项技术专利，8个开源项目维护者</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能区域 -->
+    <section id="skills" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold font-['Orbitron'] mb-12 text-center">
+                <span class="text-white">技术</span>
+                <span class="text-[#00ff9d]">栈</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 3D翻转卡片示例 -->
+                <div class="flip-card slide-in">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__front bg-[#0a192f] border border-gray-800">
+                            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00ff9d] to-[#0a192f] flex items-center justify-center">
+                                <i class="fab fa-react text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">前端开发</h3>
+                            <p class="text-gray-400">现代响应式Web应用</p>
+                        </div>
+                        <div class="flip-card__back bg-gradient-to-br from-[#0a192f] to-black border border-[#00ff9d]">
+                            <h3 class="text-2xl font-bold text-white mb-6">核心技术</h3>
+                            <div class="space-y-4 text-left">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-300">React/Vue</span>
+                                        <span class="text-[#00ff9d]">95%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-300">TypeScript</span>
+                                        <span class="text-[#00ff9d]">90%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-300">WebGL</span>
+                                        <span class="text-[#00ff9d]">85%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card slide-in">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__front bg-[#0a192f] border border-gray-800">
+                            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#ff2a6d] to-[#0a192f] flex items-center justify-center">
+                                <i class="fas fa-server text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">后端架构</h3>
+                            <p class="text-gray-400">高可用分布式系统</p>
+                        </div>
+                        <div class="flip-card__back bg-gradient-to-br from-[#0a192f] to-black border border-[#ff2a6d]">
+                            <h3 class="text-2xl font-bold text-white mb-6">核心技术</h3>
+                            <div class="space-y-4 text-left">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-300">Node.js</span>
+                                        <span class="text-[#ff2a6d]">92%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-300">Docker/K8s</span>
+                                        <span class="text-[#ff2a6d]">88%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-300">AWS/GCP</span>
+                                        <span class="text-[#ff2a6d]">85%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card slide-in">
+                    <div class="flip-card__inner">
+                        <div class="flip-card__front bg-[#0a192f] border border-gray-800">
+                            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#d4af37] to-[#0a192f] flex items-center justify-center">
+                                <i class="fas fa-brain text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">AI/ML</h3>
+                            <p class="text-gray-400">智能算法与模型部署</p>
+                        </div>
+                        <div class="flip-card__back bg-gradient-to-br from-[#0a192f] to-black border border-[#d4af37]">
+                            <h3 class="text-2xl font-bold text-white mb-6">核心技术</h3>
+                            <div class="space-y-4 text-left">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-300">TensorFlow</span>
+                                        <span class="text-[#d4af37]">87%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 87%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-300">PyTorch</span>
+                                        <span class="text-[#d4af37]">83%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 83%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-300">模型部署</span>
+                                        <span class="text-[#d4af37]">80%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects" class="py-20 bg-gradient-to-b from-black to-[#0a192f]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold font-['Orbitron'] mb-12 text-center">
+                <span class="text-white">精选</span>
+                <span class="text-[#ff2a6d]">项目</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#00ff9d] transition-all duration-500 slide-in">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#00ff9d]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="p-8 relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-lg bg-[#00ff9d]/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-atom text-[#00ff9d] text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Quantum Dashboard</h3>
+                                <p class="text-gray-400">实时数据可视化平台</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            基于WebGL的3D数据可视化仪表板，支持实时流数据处理与交互式分析。
+                            集成机器学习预测模型，提供智能化业务洞察。
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <span class="px-3 py-1 bg-[#00ff9d]/10 text-[#00ff9d] rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-[#00ff9d]/10 text-[#00ff9d] rounded-full text-sm">Three.js</span>
+                            <span class="px-3 py-1 bg-[#00ff9d]/10 text-[#00ff9d] rounded-full text-sm">WebSocket</span>
+                            <span class="px-3 py-1 bg-[#00ff9d]/10 text-[#00ff9d] rounded-full text-sm">TensorFlow.js</span>
+                        </div>
+                        <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                            <a href="#" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#00ff9d] to-[#0a192f] text-white font-bold rounded-full hover:scale-105 transition-transform duration-300">
+                                查看详情
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#ff2a6d] transition-all duration-500 slide-in">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#ff2a6d]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="p-8 relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-lg bg-[#ff2a6d]/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-robot text-[#ff2a6d] text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Nexus AI Assistant</h3>
+                                <p class="text-gray-400">智能代码助手</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            基于GPT-4架构的智能编程助手，支持代码自动补全、错误检测、
+                            性能优化建议，并集成到主流开发环境中。
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <span class="px-3 py-1 bg-[#ff2a6d]/10 text-[#ff2a6d] rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-[#ff2a6d]/10 text-[#ff2a6d] rounded-full text-sm">FastAPI</span>
+                            <span class="px-3 py-1 bg-[#ff2a6d]/10 text-[#ff2a6d] rounded-full text-sm">OpenAI API</span>
+                            <span class="px-3 py-1 bg-[#ff2a6d]/10 text-[#ff2a6d] rounded-full text-sm">Docker</span>
+                        </div>
+                        <div class="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                            <a href="#" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#ff2a6d] to-[#0a192f] text-white font-bold rounded-full hover:scale-105 transition-transform duration-300">
+                                查看详情
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系区域 -->
+    <section id="contact" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold font-['Orbitron'] mb-12 text-center">
+                <span class="text-white">连接</span>
+                <span class="text-[#d4af37]">世界</span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    <!-- 技术社区图标网格 -->
+                    <a href="#" class="group relative p-6 bg-[#0a192f] rounded-xl border border-gray-800 hover:border-[#d4af37] hover:bg-[#d4af37]/10 transition-all duration-300 transform hover:-translate-y-2 slide-in">
+                        <div class="text-center">
+                            <i class="fab fa-github text-4xl text-white group-hover:text-[#d4af37] mb-4"></i>
+                            <p class="font-bold text-white group-hover:text-[#d4af37]">GitHub</p>
+                            <p class="text-sm text-gray-500 group-hover:text-gray-300">@neodev</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="group relative p-6 bg-[#0a192f] rounded-xl border border-gray-800 hover:border-[#00ff9d] hover:bg-[#00ff9d]/10 transition-all duration-300 transform hover:-translate-y-2 slide-in">
+                        <div class="text-center">
+                            <i class="fab fa-twitter text-4xl text-white group-hover:text-[#00ff9d] mb-4"></i>
+                            <p class="font-bold text-white group-hover:text-[#00ff9d]">Twitter</p>
+                            <p class="text-sm text-gray-500 group-hover:text-gray-300">@neo_dev</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="group relative p-6 bg-[#0a192f] rounded-xl border border-gray-800 hover:border-[#ff2a6d] hover:bg-[#ff2a6d]/10 transition-all duration-300 transform hover:-translate-y-2 slide-in">
+                        <div class="text-center">
+                            <i class="fab fa-linkedin text-4xl text-white group-hover:text-[#ff2a6d] mb-4"></i>
+                            <p class="font-bold text-white group-hover:text-[#ff2a6d]">LinkedIn</p>
+                            <p class="text-sm text-gray-500 group-hover:text-gray-300">Neo Dev</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="group relative p-6 bg-[#0a192f] rounded-xl border border-gray-800 hover:border-white hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2 slide-in">
+                        <div class="text-center">
+                            <i class="fas fa-envelope text-4xl text-white group-hover:text-white mb-4"></i>
+                            <p class="font-bold text-white">Email</p>
+                            <p class="text-sm text-gray-500 group-hover:text-gray-300">neo@dev.com</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="bg-[#0a192f] rounded-2xl p-8 border border-gray-800 neon-border slide-in">
+                    <h3 class="text-2xl font-bold text-white mb-6 text-center">发送消息</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-400 mb-2">姓名</label>
+                                <input type="text" class="w-full px-4 py-3 bg-black/50 border border-gray-800 rounded-lg text-white focus:border-[#d4af37] focus:outline-none transition-colors" placeholder="你的名字">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2">邮箱</label>
+                                <input type="email" class="w-full px-4 py-3 bg-black/50 border border-gray-800 rounded-lg text-white focus:border-[#00ff9d] focus:outline-none transition-colors" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 mb-2">主题</label>
+                            <input type="text" class="w-full px-4 py-3 bg-black/50 border border-gray-800 rounded-lg text-white focus:border-[#ff2a6d] focus:outline-none transition-colors" placeholder="消息主题">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 mb-2">消息</label>
+                            <textarea rows="5" class="w-full px-4 py-3 bg-black/50 border border-gray-800 rounded-lg text-white focus:border-[#d4af37] focus:outline-none transition-colors" placeholder="输入你的消息..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-[#d4af37] to-[#f9d423] text-black font-bold rounded-lg hover:scale-[1.02] transition-transform duration-300 text-lg">
+                            发送消息
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-8 bg-[#0a192f] border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-bold font-['Orbitron']">
+                        <span class="text-white">Neo</span><span class="text-[#d4af37]">Dev</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-2">© 2026 NeoDev. 探索技术的无限可能。</p>
+                </div>
+                <div class="text-center text-gray-500 text-sm">
+                    <p>本内容由AI生成，可能存在错误或不准确之处。请在使用前自行核实信息的准确性。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 初始化粒子系统 - 动画1: 动态粒子背景
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS("particles-js", {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: ["#d4af37", "#00ff9d", "#ff2a6d"] },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#d4af37",
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: { enable: true, rotateX: 600, rotateY: 1200 }
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "repulse" },
+                        onclick: { enable: true, mode: "push" },
+                        resize: true
+                    },
+                    modes: {
+                        repulse: { distance: 100, duration: 0.4 },
+                        push: { particles_nb: 4 }
+                    }
+                },
+                retina_detect: true
+            });
+
+            // 动画2: 滚动视差效果
+            const parallaxBg = document.querySelector('.parallax-bg');
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                if (parallaxBg) {
+                    parallaxBg.style.transform = `translateZ(-1px) scale(2) translateY(${scrolled * 0.5}px)`;
+                }
+            });
+
+            // 动画3: 滚动触发元素滑入
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.slide-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // 动画4: 进度条动画
+            const progressBars = document.querySelectorAll('.progress-fill');
+            const progressObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.style.width;
+                        entry.target.style.width = '0%';
+                        setTimeout(() => {
+                            entry.target.style.width = width;
+                        }, 300);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            progressBars.forEach(bar => {
+                progressObserver.observe(bar);
+            });
+
+            // 主题切换
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle.querySelector('i');
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('bg-white');
+                document.body.classList.toggle('text-gray-900');
+                document.body.classList.toggle('bg-black');
+                document.body.classList.toggle('text-gray-300');
+                
+                if (themeIcon.classList.contains('fa-moon')) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    themeToggle.classList.remove('bg-[#0a192f]', 'text-[#d4af37]');
+                    themeToggle.classList.add('bg-[#d4af37]', 'text-black');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    themeToggle.classList.remove('bg-[#d4af37]', 'text-black');
+                    themeToggle.classList.add('bg-[#0a192f]', 'text-[#d4af37]');
+                }
+            });
+
+            // 表单提交
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> 发送中...`;
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = `<i class="fas fa-check"></i> 发送成功!`;
+                    submitBtn.classList.remove('from-[#d4af37]', 'to-[#f9d423]');
+                    submitBtn.classList.add('from-[#00ff9d]', 'to-[#0a192f]', 'text-white');
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('from-[#00ff9d]', 'to-[#0a192f]', 'text-white');
+                        submitBtn.classList.add('from-[#d4af37]', 'to-[#f9d423]', 'text-black');
+                        this.reset();
+                    }, 2000);
+                }, 1500);
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
