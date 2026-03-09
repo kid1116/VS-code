@@ -1,32 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My website</title>
     <style>
-        h1{
-            color: blue;
-            text-align: center;
-        }
-        p{
-            color:red;
-            font-size: 30px;
-            background-color: yellow;
-        }
-        
+      h1 {
+        color: blue;
+        text-align: center;
+      }
+
+      a {
+        font-size: 25px;
+      }
+      p {
+        font-size: 30px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Welcome to my website</h1>
-    <p>段落1</p>
-    <p>段落2</p>
-    <p>段落3</p>
-    <a href="页面1.html" target="_blank">跳转到页面1</a>
-    <a href="页面2.html" target="_blank">跳转到页面2</a>
+    <a href="页面1.html" target="_blank">跳转到页面1</a><br />
+    <a href="页面2.html" target="_blank">跳转到页面2</a><br />
+    <a href="页面3.html" target="_blank">跳转到页面3</a><br />
 
-    
-</body>
+    <button onclick="this.innerHTML = Date()">
+      现在的时间是?
+    </button>
+    <p id="demo"></p>
+ 
+  </body>
 </html>
-
-

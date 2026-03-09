@@ -1,0 +1,43 @@
+p {
+  background-image: linear-gradient( to right,red, orange, yellow, green, blue, purple);
+  font-size: 30px;
+  background-color: rgb(250, 245, 230);
+  font-family: kaiti;
+}
+
+.box2 {
+  border-radius: 20px;
+  animation: myanim 4s linear infinite paused;
+}
+
+.box2:hover {
+  animation-play-state: running;
+}
+
+@keyframes myanim {
+  0% {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+  }
+  25% {
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+  }
+  50% {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+  }
+  75% {
+    width: 200px;
+    height: 400px;
+    background-color: aqua;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+  }
+}
