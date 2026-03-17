@@ -85,11 +85,7 @@ def get_number_rows(ai_settings,ship_height,alien_height):
     available_space_y = (ai_settings.screen_height - (3 * alien_height) - ship_height)
     number_rows = int(available_space_y / (2 * alien_height))
     return number_rows
-<<<<<<< HEAD
 
 #外星人移动
 def update_aliens(aliens):
     aliens.update()
-=======
-    
->>>>>>> 57bcecc858ffb1f1e4577bf232890b180e48df71
