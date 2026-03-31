@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五一长三角之旅 | 六日五城深度游</title>
+    <script src="https://image.uc.cn/s/uae/g/3n/mos-production/fontawesome-free-7.1.0-web/js/all.min.js"></script>
+    <script src="https://image.uc.cn/s/uae/g/3n/mos-production/0915/3.4.17.js"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline-item {
+            padding: 20px 0;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4f46e5;
+            border: 4px solid white;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-content {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            width: 45%;
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 55%;
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 55%;
+        }
+        .timeline-connector {
+            position: absolute;
+            width: 2px;
+            background-color: #e5e7eb;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* 自定义卡片悬停效果 */
+        .city-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .city-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* 美食标签样式 */
+        .food-tag {
+            display: inline-block;
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin: 4px;
+        }
+        
+        /* 响应式时间轴调整 */
+        @media (max-width: 768px) {
+            .timeline-item::before {
+                left: 30px;
+            }
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+            }
+            .timeline-connector {
+                left: 30px;
+            }
+        }
+    </style>
+<script>
+!(function(j,a,g){j.__itrace_conf = {bid: 'kt40h0wl-koyh4af8',rel: '', uid: '649308de-b485-45e4-9636-4fab1d295ad9' ,  spa: true, plugins:['jserror','interface','perf','resource','flow','blank']};var b = a.createElement("script");var d = a.getElementsByTagName("script")[0];b.type = "text/javascript";b.crossorigin = true;b.async = true;b.onload = function(){j.__itrace && j.__itrace.setReady()};d.parentNode.insertBefore(b,d);b.src = g})(window, document, "https://g.alicdn.com/woodpeckerx/itrace-next/itrace.iife.js")
+</script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- 顶部导航 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-map-marked-alt text-purple-600 text-xl"></i>
+                    <h1 class="text-xl font-bold text-gray-800">五一长三角之旅</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-gray-600 hidden md:inline">吴天宇 · 程佳音 · 江明珊 · 肖天阳 · 安宏皓</span>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">5人团队</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <header class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">江南春色 · 五城巡礼</h2>
+                <p class="text-xl mb-8 opacity-90">2026年4月30日 - 5月5日 | 南京 · 无锡 · 苏州 · 绍兴 · 杭州</p>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+                    <div class="bg-white bg-opacity-20 p-4 rounded-lg backdrop-blur-sm">
+                        <p class="text-sm">总天数</p>
+                        <p class="text-2xl font-bold">6天</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-4 rounded-lg backdrop-blur-sm">
+                        <p class="text-sm">游览城市</p>
+                        <p class="text-2xl font-bold">5座</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-4 rounded-lg backdrop-blur-sm">
+                        <p class="text-sm">核心景点</p>
+                        <p class="text-2xl font-bold">17+</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-4 rounded-lg backdrop-blur-sm">
+                        <p class="text-sm">特色美食</p>
+                        <p class="text-2xl font-bold">30+</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-4 rounded-lg backdrop-blur-sm">
+                        <p class="text-sm">春季活动</p>
+                        <p class="text-2xl font-bold">6项</p>
+                    </div>
+                </div>
+                <p class="text-lg opacity-90">一次穿越时空的文化巡礼，深度体验江南园林、水乡古镇、运河文化与春季限定节庆</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 行程时间轴 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">行程总览</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">每日一城，科学衔接，确保充分感受各地独特魅力</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-connector"></div>
+                
+                <!-- 4月30日 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 text-purple-800 px-4 py-2 rounded-lg font-bold mr-4">
+                                4月30日
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">南京 · 六朝古都</h3>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-flex items-center text-gray-600 mb-2">
+                                <i class="fas fa-tag mr-2 text-purple-500"></i>
+                                集合日 · 初遇金陵
+                            </span>
+                            <p class="text-gray-700">下午抵达南京，游览中山陵、夫子庙秦淮河、老门东，夜游秦淮灯会</p>
+                        </div>
+                        <div class="flex flex-wrap">
+                            <span class="food-tag">盐水鸭</span>
+                            <span class="food-tag">鸭血粉丝汤</span>
+                            <span class="food-tag">野菜系列</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5月1日 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg font-bold mr-4">
+                                5月1日
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">无锡 · 太湖明珠</h3>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-flex items-center text-gray-600 mb-2">
+                                <i class="fas fa-tag mr-2 text-blue-500"></i>
+                                太湖烟波 · 樱落如雪
+                            </span>
+                            <p class="text-gray-700">上午游览鼋头渚，下午前往惠山古镇，傍晚体验拈花湾禅意灯光秀</p>
+                        </div>
+                        <div class="flex flex-wrap">
+                            <span class="food-tag">无锡小笼包</span>
+                            <span class="food-tag">酱排骨</span>
+                            <span class="food-tag">银丝面</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5月2日 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 text-green-800 px-4 py-2 rounded-lg font-bold mr-4">
+                                5月2日
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">苏州 · 园林典范</h3>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-flex items-center text-gray-600 mb-2">
+                                <i class="fas fa-tag mr-2 text-green-500"></i>
+                                园林雅集 · 梦回姑苏
+                            </span>
+                            <p class="text-gray-700">参观拙政园、苏州博物馆，漫步平江路，傍晚逛山塘街赏水巷人家</p>
+                        </div>
+                        <div class="flex flex-wrap">
+                            <span class="food-tag">苏式汤面</span>
+                            <span class="food-tag">生煎馒头</span>
+                            <span class="food-tag">三虾拌面</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5月3日 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-amber-100 text-amber-800 px-4 py-2 rounded-lg font-bold mr-4">
+                                5月3日
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">绍兴 · 文脉绵延</h3>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-flex items-center text-gray-600 mb-2">
+                                <i class="fas fa-tag mr-2 text-amber-500"></i>
+                                文脉绵延 · 醉美越地
+                            </span>
+                            <p class="text-gray-700">探访鲁迅故里、沈园，品尝咸亨酒店美食，傍晚游览安昌古镇</p>
+                        </div>
+                        <div class="flex flex-wrap">
+                            <span class="food-tag">绍三鲜</span>
+                            <span class="food-tag">梅干菜焖肉</span>
+                            <span class="food-tag">臭豆腐</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5月4日 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-red-100 text-red-800 px-4 py-2 rounded-lg font-bold mr-4">
+                                5月4日
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">杭州 · 西子湖畔</h3>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-flex items-center text-gray-600 mb-2">
+                                <i class="fas fa-tag mr-2 text-red-500"></i>
+                                西子湖畔 · 龙井飘香
+                            </span>
+                            <p class="text-gray-700">西湖十景漫步，西溪湿地花朝节，河坊街美食探索，钱江新城灯光秀</p>
+                        </div>
+                        <div class="flex flex-wrap">
+                            <span class="food-tag">片儿川</span>
+                            <span class="food-tag">葱包桧</span>
+                            <span class="food-tag">杭州小笼包</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5月5日 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 text-purple-800 px-4 py-2 rounded-lg font-bold mr-4">
+                                5月5日
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">南京 · 归途拾忆</h3>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-flex items-center text-gray-600 mb-2">
+                                <i class="fas fa-tag mr-2 text-purple-500"></i>
+                                归途 · 再聚金陵
+                            </span>
+                            <p class="text-gray-700">上午参观南京博物院，中午颐和路民国风午餐，下午紫金山观城景，旅程结束</p>
+                        </div>
+                        <div class="flex flex-wrap">
+                            <span class="food-tag">黑猪肉小笼包</span>
+                            <span class="food-tag">金陵桂花糖粥</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 各城市亮点介绍 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">五城深度亮点</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">每座城市的文化精髓、必游景点与春季限定体验</p>
+            </div>
+            
+            <!-- 南京 -->
+            <div class="mb-16 bg-white rounded-2xl shadow-lg overflow-hidden city-card">
+                <div class="md:flex">
+                    <div class="md:w-2/5 bg-gradient-to-r from-purple-50 to-blue-50 p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-landmark text-purple-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">南京</h3>
+                                <p class="text-gray-600">六朝古都 · 金陵风华</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">春末时节，玄武湖百花争艳，紫金山绿意盎然，正是探访六朝遗迹的最佳时机。</p>
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-3">推荐动线</h4>
+                            <p class="text-gray-700">下午抵达后先赴【中山陵】瞻仰伟人风采 → 晚餐前漫步【老门东】品尝小吃 → 夜间沉浸于【夫子庙-秦淮河】灯火画舫之中。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3">春季活动</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-leaf text-green-500 mt-1 mr-2"></i>
+                                    <span>环玄武湖文旅消费集聚区"环湖春媚"主题活动（3-5月）<sup>[4]</sup></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-crown text-yellow-500 mt-1 mr-2"></i>
+                                    <span>大报恩寺"马皇后的舞会·大明春日派对"（4月1-6日）<sup>[8]</sup></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- 景点卡片 -->
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-purple-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-mountain text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">中山陵园风景区</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">孙中山先生陵寝所在地，中国近代建筑杰作<sup>[1],[2]</sup></p>
+                                <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mt-2">5A景区</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-purple-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-water text-blue-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">夫子庙秦淮风光带</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">明清科举文化见证地，夜晚秦淮灯影迷人<sup>[3],[1]</sup></p>
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mt-2">5A景区</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-purple-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-university text-green-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">南京博物院</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">中国三大博物馆之一，馆藏文物42万余件<sup>[1]</sup></p>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mt-2">免费</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-purple-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-tree text-amber-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">明孝陵</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">明朝开国皇帝朱元璋与皇后马氏合葬陵墓<sup>[3],[2]</sup></p>
+                                <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded mt-2">世界遗产</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-4">特色美食推荐</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <div class="flex items-center bg-gray-100 px-3 py-2 rounded-lg">
+                                    <i class="fas fa-utensils text-gray-500 mr-2"></i>
+                                    <span>盐水鸭（桂花鸭）<sup>[7]</sup></span>
+                                </div>
+                                <div class="flex items-center bg-gray-100 px-3 py-2 rounded-lg">
+                                    <i class="fas fa-utensils text-gray-500 mr-2"></i>
+                                    <span>鸭血粉丝汤</span>
+                                </div>
+                                <div class="flex items-center bg-gray-100 px-3 py-2 rounded-lg">
+                                    <i class="fas fa-utensils text-gray-500 mr-2"></i>
+                                    <span>野菜系列（菊花脑、香椿头等）<sup>[5],[6]</sup></span>
+                                </div>
+                                <div class="flex items-center bg-gray-100 px-3 py-2 rounded-lg">
+                                    <i class="fas fa-utensils text-gray-500 mr-2"></i>
+                                    <span>黑猪肉多汁小笼包<sup>[6]</sup></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 无锡 -->
+            <div class="mb-16 bg-white rounded-2xl shadow-lg overflow-hidden city-card">
+                <div class="md:flex">
+                    <div class="md:w-3/5 p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-tree text-blue-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">太湖鼋头渚风景区</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">"太湖第一名胜"，世界三大赏樱胜地之一<sup>[9],[10],[11]</sup></p>
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mt-2">5A景区</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-place-of-worship text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">拈花湾</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">唐风宋韵风格，夜景华灯初上如梦似幻<sup>[10]</sup></p>
+                                <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mt-2">文旅小镇</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-history text-green-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">惠山古镇</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">"无锡历史文化的露天博物馆"<sup>[10],[11]</sup></p>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mt-2">历史文化街区</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-video text-amber-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">三国水浒城</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">《三国演义》《水浒传》拍摄地<sup>[10],[11]</sup></p>
+                                <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded mt-2">影视主题</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">春季特别活动</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start bg-blue-50 p-4 rounded-lg">
+                                    <i class="fas fa-graduation-cap text-blue-500 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">"锡游乐研"二十条精品研学线路<sup>[11]</sup></p>
+                                        <p class="text-gray-700 text-sm mt-1">打造"行走的课堂"，涵盖红色探魂、山水探美等主题</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start bg-green-50 p-4 rounded-lg">
+                                    <i class="fas fa-ticket-alt text-green-500 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">无锡春假"宠学生"免票活动<sup>[11]</sup></p>
+                                        <p class="text-gray-700 text-sm mt-1">4月1日至6日，16周岁及以下学生免首道门票</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/5 bg-gradient-to-r from-blue-50 to-cyan-50 p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-water text-blue-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">无锡</h3>
+                                <p class="text-gray-600">太湖之滨 · 锡韵悠长</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">这座江南水乡工业重镇，拥有极为丰富的自然与人文资源。鼋头渚樱花虽已近尾声，但其园林之美依旧动人。</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-3">推荐动线</h4>
+                            <p class="text-gray-700">上午游览【鼋头渚】沿湖步行 → 下午前往【惠山古镇】参观祠堂与泥人博物馆 → 傍晚进入【拈花湾】观看灯光秀与禅乐表演。</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3">特色美食</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-dot-circle text-blue-500 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">无锡酱排骨<sup>[12],[13]</sup></p>
+                                        <p class="text-gray-700 text-sm">"锡帮菜"代表，浓油赤酱，甜出头咸收口</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-dot-circle text-blue-500 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">小笼馒头（无锡小笼包）<sup>[13]</sup></p>
+                                        <p class="text-gray-700 text-sm">皮薄卤足，鲜香甜美，数量超苏常总和</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-dot-circle text-blue-500 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">银丝面<sup>[13]</sup></p>
+                                        <p class="text-gray-700 text-sm">面条直径仅0.8mm，极细筋道，汤底考究</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 无锡图片 -->
+                        <div class="mt-8 pt-6 border-t border-blue-200">
+                            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                                <img src="https://agent.qianwen.com/mos/6a151229cc3a4da291ef7b97e9b579f4/e94b3944a6d20a6d1a88c3235032d81f" alt="无锡拈花湾夜景：唐风宋韵建筑群，白墙青瓦，小桥流水，华灯初上，灯笼点缀，禅意十足" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-gray-600 text-sm mt-2 text-center">拈花湾唐风建筑群夜景<sup>[17]</sup></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 苏州 -->
+            <div class="mb-16 bg-white rounded-2xl shadow-lg overflow-hidden city-card">
+                <div class="md:flex">
+                    <div class="md:w-2/5 bg-gradient-to-r from-green-50 to-emerald-50 p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-archway text-green-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">苏州</h3>
+                                <p class="text-gray-600">人间天堂 · 园林典范</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">苏州是中国古典园林的集大成者，亦是江南水乡的灵魂所在。当日高铁约30分钟即可由无锡抵苏。</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-3">推荐动线</h4>
+                            <p class="text-gray-700">上午参观【拙政园】+【苏州博物馆】→ 午后漫步【平江路】喝一杯评弹咖啡 → 傍晚逛【山塘街】赏夕阳下的水巷人家。</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-3">春季活动</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-calendar-alt text-green-500 mt-1 mr-2"></i>
+                                    <span>2026苏州国际旅游年·苏州春天旅游季（3月21日起）<sup>[24],[25]</sup></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-ship text-green-500 mt-1 mr-2"></i>
+                                    <span>"太湖揽胜"水上游项目（新开通航线）<sup>[25]</sup></span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3">特色美食</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-utensil-spoon text-green-500 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">苏式汤面<sup>[21],[22]</sup></p>
+                                        <p class="text-gray-700 text-sm">讲究"浇头是灵魂"，汤底清亮，银丝细面筋道</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-utensil-spoon text-green-500 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">生煎馒头</p>
+                                        <p class="text-gray-700 text-sm">底部焦脆，内含热汤，肉香四溢</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-tree text-green-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">拙政园</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">苏州最大古典园林，江南名园精华<sup>[18],[19],[20]</sup></p>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mt-2">世界遗产</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-road text-blue-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">平江历史街区</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">保存完整水乡格局，沿河而居，文艺小店林立<sup>[18]</sup></p>
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mt-2">历史文化街区</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-museum text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">苏州博物馆</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">贝聿铭设计，收藏苏州历史典藏<sup>[18]</sup></p>
+                                <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mt-2">文化地标</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-mountain text-amber-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">虎丘山</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">"吴中第一名胜"，有云岩寺塔等古迹<sup>[18],[20]</sup></p>
+                                <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded mt-2">古城地标</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 苏州图片 -->
+                        <div class="mt-8">
+                            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                                <img src="https://agent.qianwen.com/mos/6a151229cc3a4da291ef7b97e9b579f4/e2482ff6f362512931980727d69e988c" alt="苏州平江路沿河街景：江南水乡风貌，白墙黛瓦，小桥流水，石板路，游船穿梭，灯笼悬挂，文艺店铺林立" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-gray-600 text-sm mt-2 text-center">平江路沿河街景<sup>[26]</sup></p>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-4">更多苏州美食</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <div class="flex items-center bg-gray-100 px-3 py-2 rounded-lg">
+                                    <i class="fas fa-utensils text-gray-500 mr-2"></i>
+                                    <span>三虾拌面<sup>[21]</sup></span>
+                                </div>
+                                <div class="flex items-center bg-gray-100 px-3 py-2 rounded-lg">
+                                    <i class="fas fa-utensils text-gray-500 mr-2"></i>
+                                    <span>枫镇大面<sup>[22]</sup></span>
+                                </div>
+                                <div class="flex items-center bg-gray-100 px-3 py-2 rounded-lg">
+                                    <i class="fas fa-utensils text-gray-500 mr-2"></i>
+                                    <span>得月楼油爆虾<sup>[23]</sup></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 绍兴 -->
+            <div class="mb-16 bg-white rounded-2xl shadow-lg overflow-hidden city-card">
+                <div class="md:flex">
+                    <div class="md:w-3/5 p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-amber-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-book-open text-amber-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">鲁迅故里、沈园景区</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">绍兴首个5A级景区，鲁迅文学世界与陆游爱情故事<sup>[27]</sup></p>
+                                <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded mt-2">5A景区</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-amber-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-pen-nib text-blue-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">兰亭</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">王羲之《兰亭集序》诞生地，书法圣地<sup>[27]</sup></p>
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mt-2">4A景区</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-amber-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-ship text-green-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">安昌古镇景区</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">腊肠、酱货挂满廊棚，原生态水乡风貌</p>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mt-2">4A景区</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-amber-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-mountain text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">会稽山大禹陵</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">大禹陵寝所在地，历史文化深厚</p>
+                                <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mt-2">4A景区</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">春季限定活动</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start bg-amber-50 p-4 rounded-lg">
+                                    <i class="fas fa-flower text-amber-500 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">漓渚春兰大集 & 2026春兰大集<sup>[31],[32],[33]</sup></p>
+                                        <p class="text-gray-700 text-sm mt-1">展出1600-1800盆精品兰花，设有花田音乐会、汉服赏花等活动</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start bg-blue-50 p-4 rounded-lg">
+                                    <i class="fas fa-ship text-blue-500 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">"醉游长歌·寻梦绍兴水上游"项目<sup>[34]</sup></p>
+                                        <p class="text-gray-700 text-sm mt-1">4月对中小学生免费，乘船穿越古运河感受"水城"魅力</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/5 bg-gradient-to-r from-amber-50 to-orange-50 p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-wine-bottle text-amber-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">绍兴</h3>
+                                <p class="text-gray-600">文脉绵延 · 醉美越地</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">这是一座被鲁迅、王羲之、陆游、徐渭等人点亮的城市，也是黄酒之乡、书法圣地。</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-3">推荐动线</h4>
+                            <p class="text-gray-700">上午探访【鲁迅故里】看百草园三味书屋 → 中午在【咸亨酒店】品尝孔乙己茴香豆 → 下午游览【沈园】听《钗头凤》故事 → 傍晚前往【安昌古镇】看水乡夜色。</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-3">特色美食</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-dot-circle text-amber-500 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">绍三鲜<sup>[28],[29]</sup></p>
+                                        <p class="text-gray-700 text-sm">南宋宋高宗赐名，传承800余年，被誉为"越菜之首"</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-dot-circle text-amber-500 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">梅干菜焖肉<sup>[28],[30]</sup></p>
+                                        <p class="text-gray-700 text-sm">入选国宴，绍兴代表性菜肴</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-dot-circle text-amber-500 mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-gray-800">油炸臭豆腐<sup>[28],[30]</sup></p>
+                                        <p class="text-gray-700 text-sm">"闻着臭，吃着香"，咸亨出品获金牌小吃称号</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 绍兴图片 -->
+                        <div class="mt-8 pt-6 border-t border-amber-200">
+                            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                                <img src="https://agent.qianwen.com/mos/6a151229cc3a4da291ef7b97e9b579f4/0356a8000c4c0076b11edf8943ceaff3" alt="绍兴安昌古镇水乡风貌：腊肠酱货挂满传统廊棚，小桥流水，乌篷船停泊，石板路，白墙黛瓦建筑，原生态江南水乡场景" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-gray-600 text-sm mt-2 text-center">安昌古镇腊肠廊棚<sup>[36]</sup></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 杭州 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden city-card">
+                <div class="md:flex">
+                    <div class="md:w-2/5 bg-gradient-to-r from-red-50 to-pink-50 p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-leaf text-red-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">杭州</h3>
+                                <p class="text-gray-600">西子湖畔 · 龙井飘香</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">最后一站抵达杭州，中国最具诗意的城市之一。西湖无门票，自由进出，适合慢行细品；西溪湿地则是都市中的绿肺。</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-3">推荐动线</h4>
+                            <p class="text-gray-700">西湖十景漫步 → 西溪湿地花朝节 → 河坊街美食探索 → 钱江新城灯光秀。</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-3">西湖十景精选</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <span class="bg-white border border-gray-200 px-3 py-2 rounded text-sm">苏堤春晓</span>
+                                <span class="bg-white border border-gray-200 px-3 py-2 rounded text-sm">曲院风荷</span>
+                                <span class="bg-white border border-gray-200 px-3 py-2 rounded text-sm">平湖秋月</span>
+                                <span class="bg-white border border-gray-200 px-3 py-2 rounded text-sm">断桥残雪</span>
+                                <span class="bg-white border border-gray-200 px-3 py-2 rounded text-sm">三潭印月</span>
+                                <span class="bg-white border border-gray-200 px-3 py-2 rounded text-sm">雷峰夕照</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3">春季活动</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-flower text-red-500 mt-1 mr-2"></i>
+                                    <span>西溪花朝节（3月29日至5月10日）<sup>[44],[45]</sup></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-coffee text-green-500 mt-1 mr-2"></i>
+                                    <span>西湖龙井春茶季（3月28-29日）<sup>[46]</sup></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-2"></i>
+                                    <span>钱江新城灯光秀（每周二、五、六晚）<sup>[47]</sup></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-red-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-lake text-red-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">西湖风景名胜区</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">全国首个免门票5A景区，西湖十景闻名天下<sup>[37]</sup></p>
+                                <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded mt-2">5A景区 · 免费</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-red-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-place-of-worship text-green-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">灵隐寺</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">千年古刹，自2025年12月1日起实行免票政策<sup>[37]</sup></p>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mt-2">免费 · 需预约</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-red-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-tree text-blue-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">西溪国家湿地公园</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">中国首个城市湿地公园，春季花朝节主场地<sup>[38]</sup></p>
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mt-2">5A景区</span>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-red-300 transition-colors">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-road text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800">河坊街</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">杭帮菜与非遗工坊聚集地，美食文化街区<sup>[39]</sup></p>
+                                <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mt-2">历史街区</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 杭州图片 -->
+                        <div class="mt-8">
+                            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                                <img src="https://agent.qianwen.com/mos/6a151229cc3a4da291ef7b97e9b579f4/c3d4ddfd0d161e1d94795528230f3253" alt="杭州西湖断桥春景：经典石拱桥横跨西湖，春日垂柳嫩绿，桃花盛开，湖面波光粼粼，游船点缀，远处保俶塔映衬" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-gray-600 text-sm mt-2 text-center">西湖断桥春景<sup>[48]</sup></p>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-4">杭州特色美食</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <p class="font-medium text-gray-800">片儿川<sup>[41]</sup></p>
+                                    <p class="text-gray-700 text-sm mt-1">杭州十大名面之一，奎元馆日售2000碗</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <p class="font-medium text-gray-800">杭州小笼包<sup>[41]</sup></p>
+                                    <p class="text-gray-700 text-sm mt-1">18道褶子，皮薄馅鲜，内含猪皮冻化成汤汁</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <p class="font-medium text-gray-800">葱包桧<sup>[42]</sup></p>
+                                    <p class="text-gray-700 text-sm mt-1">老杭州街头小吃，面皮裹油条与小葱烙焦</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 旅行贴士 -->
+    <section class="py-16 bg-gradient-to-b from-gray-100 to-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">旅行实用贴士</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-calendar-check text-purple-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">预约提醒</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>提前通过官方渠道预约重点景点门票（如拙政园、灵隐寺等）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>建议准备汉服或传统服饰用于拍照打卡</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>关注各城市春季限定活动的时间安排</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-utensils text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">美食探索</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-asterisk text-blue-500 mt-1 mr-3"></i>
+                                <span>品尝5地30+道特色时令美食，注重"不时不食"</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-asterisk text-blue-500 mt=1 mr-3"></i>
+                                <span>南京：春日野菜系列；无锡：甜味小笼包；苏州：苏式汤面</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-asterisk text-blue-500 mt-1 mr-3"></i>
+                                <span>绍兴：黄酒入馔；杭州：西湖龙井茶香</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-train text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">交通建议</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-subway text-green-500 mt-1 mr-3"></i>
+                                <span>长三角高铁网络发达，城际交通便捷</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-subway text-green-500 mt-1 mr-3"></i>
+                                <span>南京→无锡：约1小时；无锡→苏州：约30分钟</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-subway text-green-500 mt-1 mr-3"></i>
+                                <span>苏州→绍兴：约2小时；杭州→南京：约2.5小时</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-sun text-amber-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">最佳体验</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-amber-500 mt-1 mr-3"></i>
+                                <span>游览17处世界遗产/国家级景区</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-amber-500 mt-1 mr-3"></i>
+                                <span>参与6项春季限定文旅活动</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-amber-500 mt-1 mr-3"></i>
+                                <span>深度体验江南园林、水乡古镇、运河文化、茶事节庆与非遗技艺</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-200">
+                    <div class="flex items-start">
+                        <i class="fas fa-quote-left text-purple-500 text-2xl mr-4 mt-1"></i>
+                        <div>
+                            <p class="text-lg italic text-gray-700 mb-4">"五一长三角之旅"不仅是一次地理上的迁徙，更是一场穿越时空的文化巡礼。从南京的六朝遗韵，到无锡的太湖烟波；从苏州的园林精妙，到绍兴的文墨醇香，再到杭州的湖光山色，每一站都承载着中华文明的独特印记。</p>
+                            <p class="text-gray-600">此行将带领我们深入理解江南——不仅是地理概念，更是生活方式、审美情趣与精神归属的集合体。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                    <div class="mb-6 md:mb-0">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <i class="fas fa-map-marked-alt text-purple-400 text-2xl"></i>
+                            <h3 class="text-xl font-bold">五一长三角之旅</h3>
+                        </div>
+                        <p class="text-gray-400">吴天宇 · 程佳音 · 江明珊 · 肖天阳 · 安宏皓</p>
+                        <p class="text-gray-400">2026年4月30日 - 5月5日</p>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <p class="text-gray-400 mb-2">主题定位</p>
+                        <div class="flex flex-wrap justify-center md:justify-end gap-2">
+                            <span class="bg-purple-800 px-3 py-1 rounded-full text-sm">文化寻根</span>
+                            <span class="bg-blue-800 px-3 py-1 rounded-full text-sm">春日赏景</span>
+                            <span class="bg-green-800 px-3 py-1 rounded-full text-sm">美食探味</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-8">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <div class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-yellow-400 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <p class="font-bold text-gray-200 mb-2">免责声明</p>
+                                <p class="text-gray-400">本内容由AI生成，可能存在错误或不准确之处。请在使用前自行核实信息的准确性。所有信息均基于截至2026年初的公开资料整理，具体活动时间与景区政策请以当地最新公告为准。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center text-gray-500 text-sm">
+                        <p>© 2026 五一长三角之旅行程规划 | 设计灵感来源于江南文化与传统美学</p>
+                        <p class="mt-2">本页面为旅游行程展示，不提供预订服务</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互效果：点击美食标签显示详细信息
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为所有美食标签添加点击效果
+            const foodTags = document.querySelectorAll('.food-tag');
+            foodTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    this.classList.toggle('bg-yellow-200');
+                    this.classList.toggle('text-yellow-900');
+                });
+            });
+            
+            // 为城市卡片添加点击效果
+            const cityCards = document.querySelectorAll('.city-card');
+            cityCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('ring-2');
+                    this.classList.toggle('ring-purple-300');
+                });
+            });
+            
+            // 时间轴动画效果
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // 为时间轴项目添加动画
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
