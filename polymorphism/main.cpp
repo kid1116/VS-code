@@ -19,7 +19,7 @@ int main()
     CommissionEmployee ce("Sue", "Smith", "222", 10000, .06);
     BasePlusCommissionEmployee be("Mike", "Andy", "333", 10000, .06, 300);
 
-    cout << "Employees processed individually using static binding:\n\n"; // 静态绑定
+    cout << "Employees processed individually using static binding:\n\n"; // 静态绑定：通过对象调用函数，编译器在编译时就确定了函数调用的地址
     se.print();
     cout << "earned: $" << se.earnings() << "\n\n";
     ce.print();
@@ -33,7 +33,7 @@ int main()
     employees[1] = &ce;
     employees[2] = &be;
 
-    cout << "Employees processed polymorphically via dynamic binding:\n\n"; // 动态绑定
+    cout << "Employees processed polymorphically via dynamic binding:\n\n"; // 动态绑定:通过基类的指针或引用调用虚函数实现多态
 
     cout << "virtual function calls made off base-class pointers:\n";
     for (const Employee *employeePtr : employees)
