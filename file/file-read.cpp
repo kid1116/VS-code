@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     ifstream myfile;
-    myfile.open("example.txt",ios::in);
+    myfile.open("example.txt", ios::in);
     if (!myfile)
     {
         cerr << "Unable to open file";
@@ -22,7 +22,6 @@ int main()
     {
         cout << account << " " << name << " " << balance << endl;
     }
-
 
     myfile.close(); // 关闭文件
 }
