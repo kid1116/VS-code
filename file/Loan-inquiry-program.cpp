@@ -51,17 +51,14 @@ int main()
       break;
     }
 
-    inClientFile >> account >> name >> balance;
-
-    while (!inClientFile.eof())
+    while (inClientFile >> account >> name >> balance)
     {
       if (shouldDisplay(request, balance))
         outputLine(account, name, balance);
-      inClientFile >> account >> name >> balance;
     }
 
-    inClientFile.clear();
-    inClientFile.seekg(0);
+    inClientFile.clear();  // 清除EOF状态
+    inClientFile.seekg(0); // 将文件读取指针重新定位到文件开头（偏移0字节）
     request = getRequest();
   }
   cout << "End of run." << endl;
