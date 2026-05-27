@@ -1,1 +1,1 @@
-This is the github homepage of a novice programer.
+**这是一个编程新手的github页面，用来记录代码学习，以及一些用ai生成的~~奇奇怪怪~~代码。**
