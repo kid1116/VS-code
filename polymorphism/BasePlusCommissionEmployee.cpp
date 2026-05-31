@@ -3,7 +3,7 @@
 #include "BasePlusCommissionEmployee.h"
 using namespace std;
 
-BasePlusCommissionEmployee::BasePlusCommissionEmployee(const string &first, const string &last, const string &ssn, double sales, double rate, double salary)
+BasePlusCommissionEmployee::BasePlusCommissionEmployee(const string& first, const string& last, const string& ssn, double sales, double rate, double salary)
     : CommissionEmployee(first, last, ssn, sales, rate)
 {
     setBaseSalary(salary);

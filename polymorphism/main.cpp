@@ -8,8 +8,8 @@
 
 using namespace std;
 
-void virtualViapointer(const Employee *const); // 通过基类指针调用
-void virtualViaReference(const Employee &);    // 通过基类引用调用
+void virtualViapointer(const Employee *const);
+void virtualViaReference(const Employee &);
 
 int main()
 {
@@ -19,7 +19,7 @@ int main()
     CommissionEmployee ce("Sue", "Smith", "222", 10000, .06);
     BasePlusCommissionEmployee be("Mike", "Andy", "333", 10000, .06, 300);
 
-    cout << "Employees processed individually using static binding:\n\n"; // 静态绑定：通过对象调用函数，编译器在编译时就确定了函数调用的地址
+    cout << "Employees processed individually using static binding:\n\n";
     se.print();
     cout << "earned: $" << se.earnings() << "\n\n";
     ce.print();
@@ -27,13 +27,12 @@ int main()
     be.print();
     cout << "earned: $" << be.earnings() << "\n\n";
 
-    // create vector of three base—class pointers:
     vector<Employee *> employees(3);
     employees[0] = &se;
     employees[1] = &ce;
     employees[2] = &be;
 
-    cout << "Employees processed polymorphically via dynamic binding:\n\n"; // 动态绑定:通过基类的指针或引用调用虚函数实现多态
+    cout << "Employees processed polymorphically via dynamic binding:\n\n";
 
     cout << "virtual function calls made off base-class pointers:\n";
     for (const Employee *employeePtr : employees)

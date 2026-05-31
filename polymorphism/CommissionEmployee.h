@@ -7,7 +7,7 @@
 class CommissionEmployee : public Employee
 {
 public:
-    CommissionEmployee(const std::string &, const std::string &, const std::string &,
+    CommissionEmployee(const std::string&, const std::string&, const std::string&,
         double = 0.0, double = 0.0);
     virtual ~CommissionEmployee() {}
 
@@ -21,7 +21,7 @@ public:
     virtual void print() const override;
 
 private:
-    double grossSales; // gross weekly sales
-    double commissionRate; // commission rate per sale
+    double grossSales; 
+    double commissionRate; 
 };
 #endif

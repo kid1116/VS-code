@@ -3,7 +3,7 @@
 #include "CommissionEmployee.h"
 using namespace std;
 
-CommissionEmployee::CommissionEmployee(const string &first, const string &last, const string &ssn, double sales, double rate)
+CommissionEmployee::CommissionEmployee(const string& first, const string& last, const string& ssn, double sales, double rate)
     : Employee(first, last, ssn)
 {
     setGrossSales(sales);
@@ -46,5 +46,5 @@ void CommissionEmployee::print() const
     cout << "commission employee: ";
     Employee::print();
     cout << "\ngross sales: " << getGrossSales()
-         << "; commission rate: " << getCommissionRate() << "\n";
+        << "; commission rate: " << getCommissionRate() << "\n";
 }

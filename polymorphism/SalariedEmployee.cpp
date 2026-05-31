@@ -4,8 +4,8 @@
 
 using namespace std;
 
-SalariedEmployee::SalariedEmployee(const string &first, const string &last,
-    const string &ssn, double salary)
+SalariedEmployee::SalariedEmployee(const string& first, const string& last,
+    const string& ssn, double salary)
     : Employee(first, last, ssn)
 {
     setWeeklySalary(salary);
@@ -13,10 +13,10 @@ SalariedEmployee::SalariedEmployee(const string &first, const string &last,
 
 void SalariedEmployee::setWeeklySalary(double salary)
 {
-    if(salary >= 0.0)
+    if (salary >= 0.0)
         weeklySalary = salary;
     else
-        throw invalid_argument("Weekly salary must be >= 0.0");//接收到了无效的参数
+        throw invalid_argument("Weekly salary must be >= 0.0");
 }
 
 double SalariedEmployee::getWeeklySalary() const
@@ -33,5 +33,5 @@ void SalariedEmployee::print() const
 {
     cout << "salaried employee: ";
     Employee::print();
-    cout << "\nweekly salary: " << getWeeklySalary()<<"\n";
+    cout << "\nweekly salary: " << getWeeklySalary() << "\n";
 }

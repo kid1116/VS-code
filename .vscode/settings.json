@@ -1,8 +1,15 @@
 {
-    "code-runner.runInTerminal": true,
-    "code-runner.saveFileBeforeRun": true,
-    "code-runner.executorMap": {
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.executorMap": {
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $fileNameWithoutExt && del $fileNameWithoutExt.exe",
     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $fileNameWithoutExt && del $fileNameWithoutExt.exe"
-},
+  },
+  "python-envs.pythonProjects": [
+    {
+      "path": ".",
+      "envManager": "ms-python.python:system",
+      "packageManager": "ms-python.python:pip"
+    }
+  ]
 }
