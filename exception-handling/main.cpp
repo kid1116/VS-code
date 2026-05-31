@@ -12,6 +12,11 @@ double quotient(int numerator, int denominator)
     return static_cast<double>(numerator) / denominator;
 }
 
+void print() noexcept
+{
+    cout << "This function is marked as noexcept, which means it promises not to throw any exceptions." << std::endl;
+}
+
 int main()
 {
     int num1, num2;
