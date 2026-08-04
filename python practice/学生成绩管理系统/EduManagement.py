@@ -90,22 +90,25 @@ class EduManagement:
             print("6. Exit")
 
             choice = input("Please enter your choice (1-6): ")
-            if choice == '1':
-                self.add_student()
-            elif choice == '2':
-                self.update_student()
-            elif choice == '3':
-                self.delete_student()
-            elif choice == '4':
-                self.query_student()
-            elif choice == '5':
-                self.list_students()
-            elif choice == '6':
-                print("Exiting the system.")
-                break
-            else:
-                print("Invalid choice. Please try again.")
-
+            try:
+                if choice == '1':
+                    self.add_student()
+                elif choice == '2':
+                    self.update_student()
+                elif choice == '3':
+                    self.delete_student()
+                elif choice == '4':
+                    self.query_student()
+                elif choice == '5':
+                    self.list_students()
+                elif choice == '6':
+                    print("Exiting the system.")
+                    break
+                else:
+                    print("Invalid choice. Please try again.")
+            except Exception as e:
+                print(f"An error occurred: {e}")
+                
 if __name__ == "__main__":
     new_edu=EduManagement()
     new_edu.run()
