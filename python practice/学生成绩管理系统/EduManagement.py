@@ -91,21 +91,23 @@ class EduManagement:
 
             choice = input("Please enter your choice (1-6): ")
             try:
-                if choice == '1':
-                    self.add_student()
-                elif choice == '2':
-                    self.update_student()
-                elif choice == '3':
-                    self.delete_student()
-                elif choice == '4':
-                    self.query_student()
-                elif choice == '5':
-                    self.list_students()
-                elif choice == '6':
-                    print("Exiting the system.")
-                    break
-                else:
-                    print("Invalid choice. Please try again.")
+                match choice:
+                    case '1':
+                        self.add_student()
+                    case '2':
+                        self.update_student()
+                    case '3':
+                        self.delete_student()
+                    case '4':
+                        self.query_student()
+                    case '5':
+                        self.list_students()
+                    case '6':
+                        print("Exiting the system.")
+                        break
+                    case _:
+                        print("Invalid choice. Please try again.")
+                        
             except Exception as e:
                 print(f"An error occurred: {e}")
                 
