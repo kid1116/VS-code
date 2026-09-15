@@ -12,7 +12,7 @@ class Transformer(nn.Module):
     def __init__(self):
         super(Transformer, self).__init__()
         self.encoder = encoder.Encoder()  # 编码层
-        self.decoder = Decoder()  # 解码层
+        self.decoder = decoder.Decoder()  # 解码层
         self.projection = nn.Linear(
             d_model, 
             tgt_vocab_size,

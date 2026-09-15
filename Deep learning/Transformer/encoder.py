@@ -99,8 +99,3 @@ class EncoderLayer(nn.Module):
         x = self.norm2(x + ffn_output)
 
         return x
-
-x=torch.randn(2,5,512)
-output=EncoderLayer(d_model, n_heads, d_ff, dropout).forward(x)
-print(x.shape)
-print(output.shape)
