@@ -33,7 +33,7 @@ import torch.nn as nn
 #超参数
 d_model = 512  # 词向量维度
 src_vocab_size = 10000  # 源词汇表大小
-num_layers = 6  # 编码层数量
+num_layers = 6  # 解码层数量
 n_heads = 8  # 多头注意力头数
 d_ff = 2048  # 前馈网络隐藏层维度
 dropout = 0.1  # Dropout概率
