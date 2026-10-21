@@ -11,7 +11,7 @@
       "cwd": "${fileDirname}",
       "environment": [],
       "preLaunchTask": "build cpp to output",
-      "console": "integratedTerminal"
+      "console": "newExternalWindow"
     }
   ]
 }
