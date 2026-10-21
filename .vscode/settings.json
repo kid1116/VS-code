@@ -2,8 +2,8 @@
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $fileNameWithoutExt && del $fileNameWithoutExt.exe",
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $fileNameWithoutExt && del $fileNameWithoutExt.exe"
+    "c": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\cpp-unicode.ps1\" -Source $fullFileName -Run",
+    "cpp": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\cpp-unicode.ps1\" -Source $fullFileName -Run"
   },
   "python-envs.pythonProjects": [
     {
@@ -11,5 +11,6 @@
       "envManager": "ms-python.python:system",
       "packageManager": "ms-python.python:pip"
     }
-  ]
+  ],
+  "code-runner.ignoreSelection": true
 }
