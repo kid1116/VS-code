@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "spawnCount": 4,
+  "taskCount": 0,
+  "launches": [
+    {
+      "command": "start cmd /c \"cd \"D:\\VS code\\数据结构与算法\\save_rebuild_fix_20261108\\保存测试 ' 中文 路径\\生成 目录\" & chcp.com 65001 > nul & .\\\"保存后运行.exe\" & echo. & pause\"",
+      "cwd": "D:\\VS code\\数据结构与算法\\save_rebuild_fix_20261108\\保存测试 ' 中文 路径\\生成 目录"
+    },
+    {
+      "command": "start cmd /c \"cd \"D:\\VS code\\数据结构与算法\\save_rebuild_fix_20261108\\保存测试 ' 中文 路径\\生成 目录\" & chcp.com 65001 > nul & .\\\"保存后运行.exe\" & echo. & pause\"",
+      "cwd": "D:\\VS code\\数据结构与算法\\save_rebuild_fix_20261108\\保存测试 ' 中文 路径\\生成 目录"
+    },
+    {
+      "command": "start cmd /c \"cd \"D:\\VS code\\数据结构与算法\\save_rebuild_fix_20261108\\保存测试 ' 中文 路径\\生成 目录\" & chcp.com 65001 > nul & .\\\"保存后运行.exe\" & echo. & pause\"",
+      "cwd": "D:\\VS code\\数据结构与算法\\save_rebuild_fix_20261108\\保存测试 ' 中文 路径\\生成 目录"
+    }
+  ],
+  "expectedCompileErrors": [
+    "Compilation failed (MSVC, exit code 2).\n保存后运行.cpp\r\nD:\\VS code\\数据结构与算法\\save_rebuild_fix_20261108\\保存测试 ' 中文 路径\\保存后运行.cpp(1): error C2065: “This_is_an_intentional_compile_error”: 未声明的标识符"
+  ]
+}

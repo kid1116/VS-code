@@ -1,0 +1,1 @@
+"C:\Windows\system32\cmd.exe" /d /s /c "chcp.com 932 > nul & cd "D:\VS code\数据结构与算法\vscode_only_encoding_20261108\probe\output" & chcp.com 65001 > nul & .\"console_probe.exe" & echo. & pause"

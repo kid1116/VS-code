@@ -47,6 +47,29 @@
         "panel": "shared",
         "focus": true
       }
+    },
+    {
+      "label": "C/C++: 中文路径编译运行",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\cpp-unicode.ps1",
+        "-Source",
+        "${file}",
+        "-Run"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      }
     }
   ]
 }

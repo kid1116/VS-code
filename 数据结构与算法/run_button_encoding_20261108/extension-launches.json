@@ -1,0 +1,10 @@
+[
+  {
+    "command": "start cmd /c \"cd \"D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\output\" & chcp.com 65001 > nul & .\\\"平时作业1.exe\" & echo. & pause\"",
+    "cwd": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\output"
+  },
+  {
+    "command": "start cmd /c \"cd \"D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\probe\\output\" & chcp.com 65001 > nul & .\\\"console_probe.exe\" & echo. & pause\"",
+    "cwd": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\probe\\output"
+  }
+]

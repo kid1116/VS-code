@@ -1,0 +1,27 @@
+[
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_unicode_fix_20261108\\prepared\\parent-tasks.json",
+    "destination": "D:\\VS code\\.vscode\\tasks.json",
+    "original_hash": "4d3ae0d95b59b6c36106a53757248403b8849732ef15ec50c594635ac9158cd4"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_unicode_fix_20261108\\prepared\\homework-tasks.json",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\.vscode\\tasks.json",
+    "original_hash": null
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_unicode_fix_20261108\\prepared\\homework-launch.json",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\.vscode\\launch.json",
+    "original_hash": null
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_unicode_fix_20261108\\prepared\\homework-settings.json",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\.vscode\\settings.json",
+    "original_hash": null
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_unicode_fix_20261108\\prepared\\homework-c_cpp_properties.json",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\.vscode\\c_cpp_properties.json",
+    "original_hash": null
+  }
+]

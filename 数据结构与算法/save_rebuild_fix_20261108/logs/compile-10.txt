@@ -1,0 +1,2 @@
+保存后运行.cpp
+D:\VS code\数据结构与算法\save_rebuild_fix_20261108\保存测试 ' 中文 路径\保存后运行.cpp(1): error C2065: “This_is_an_intentional_compile_error”: 未声明的标识符

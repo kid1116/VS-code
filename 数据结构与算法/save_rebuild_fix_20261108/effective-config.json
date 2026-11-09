@@ -1,0 +1,7 @@
+{
+  "c-cpp-compile-run.cpp-compiler": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+  "c-cpp-compile-run.c-compiler": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+  "c-cpp-compile-run.cpp-flags": "/utf-8 /EHsc /std:c++17 /Zi /W4",
+  "c-cpp-compile-run.c-flags": "/utf-8 /Zi /W4",
+  "c-cpp-compile-run.skip-if-compiled": false
+}

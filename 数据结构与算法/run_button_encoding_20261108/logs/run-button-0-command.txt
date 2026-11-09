@@ -1,0 +1,1 @@
+"C:\Windows\system32\cmd.exe" /d /s /c "chcp.com 932 > nul & cd "D:\VS code\58125117-吴天宇-第三次作业\平时作业\output" & chcp.com 65001 > nul & .\"平时作业1.exe" & echo. & pause"

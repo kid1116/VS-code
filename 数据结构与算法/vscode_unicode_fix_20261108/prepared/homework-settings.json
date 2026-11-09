@@ -1,0 +1,10 @@
+{
+  "files.encoding": "utf8",
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.ignoreSelection": true,
+  "code-runner.executorMap": {
+    "c": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\cpp-unicode.ps1\" -Source $fullFileName -Run",
+    "cpp": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\cpp-unicode.ps1\" -Source $fullFileName -Run"
+  }
+}

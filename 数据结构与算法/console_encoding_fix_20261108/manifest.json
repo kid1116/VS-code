@@ -1,0 +1,42 @@
+[
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\console_encoding_fix_20261108\\prepared\\实践作业\\实践作业1.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\实践作业\\实践作业1.cpp",
+    "original_hash": "bddf3567365d71321c58936793ae723c594c1dec2f42b2df7a723b9253b8f329"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\console_encoding_fix_20261108\\prepared\\平时作业\\平时作业1.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业1.cpp",
+    "original_hash": "02c425c0358ac5788f30bbe627e1030dc85a5b8be81dd6f23f29061e511038ec"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\console_encoding_fix_20261108\\prepared\\平时作业\\平时作业2-1.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业2-1.cpp",
+    "original_hash": "764956a751f76616aa69802788f7c8333dd0eb05f960622641b7636060dfe446"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\console_encoding_fix_20261108\\prepared\\平时作业\\平时作业2-2.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业2-2.cpp",
+    "original_hash": "a7b1d9e906f54f7ce25a4648a6adf9275caa1934f377f7b74f44757779ff1413"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\console_encoding_fix_20261108\\prepared\\平时作业\\平时作业3-1.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业3-1.cpp",
+    "original_hash": "f2bd4534e91676c91dc4275c0d6f2845ad56a133a4a8285ed2ce8ef29ba39705"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\console_encoding_fix_20261108\\prepared\\平时作业\\平时作业3-2.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业3-2.cpp",
+    "original_hash": "8a7fef2a11011d8670cb685b54ed46b1818d86a8b6aa731b48329db0407d9ca9"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\console_encoding_fix_20261108\\prepared\\平时作业\\平时作业3-3.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业3-3.cpp",
+    "original_hash": "07480b8f803153f4fcb6821ec71996730b68106b89efb401e43d5f1087bad841"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\console_encoding_fix_20261108\\prepared\\cpp-unicode.ps1",
+    "destination": "C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\cpp-unicode.ps1",
+    "original_hash": "fe64dce84fb0e0d1540fa04c26ecda798118a9d1b1ede38241b8731d16ea15d8"
+  }
+]

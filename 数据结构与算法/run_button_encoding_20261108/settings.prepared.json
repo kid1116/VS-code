@@ -1,0 +1,56 @@
+﻿{
+  "c-cpp-compile-run.custom-run-prefix": "chcp.com 65001 > nul &",
+  "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
+
+  "files.encoding": "utf8",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell UTF-8": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": [
+        "-NoLogo",
+        "-NoExit",
+        "-Command",
+        "chcp.com 65001 > $null; $utf8 = New-Object System.Text.UTF8Encoding($false); [Console]::InputEncoding = $utf8; [Console]::OutputEncoding = $utf8; $OutputEncoding = $utf8"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell UTF-8",
+
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.ignoreSelection": true,
+  "code-runner.executorMap": {
+  "c": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\cpp-unicode.ps1\" -Source $fullFileName -Run",
+  "cpp": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\cpp-unicode.ps1\" -Source $fullFileName -Run"
+},
+"c-cpp-compile-run.cpp-compiler": "C:\\MinGW\\bin\\g++.exe",
+  "c-cpp-compile-run.c-compiler": "C:\\MinGW\\bin\\g++.exe",
+  "c-cpp-compile-run.run-in-external-terminal": true,
+  "fittencode.languagePreference.displayPreference": "zh-cn",
+  "fittencode.languagePreference.commentPreference": "zh-cn",
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "Dracula Theme Soft",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+  },
+  "fittencode.selection.showCodeLens": false,
+  "code-runner.runInTerminal": true,
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+  },
+  "explorer.confirmDragAndDrop": false,
+  "editor.linkedEditing": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "files.autoSave": "afterDelay",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "claudeCode.preferredLocation": "panel",
+  "workbench.startupEditor": "none",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.md": "vscode.markdown.preview.editor"
+  },
+}
+

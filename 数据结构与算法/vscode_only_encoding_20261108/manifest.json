@@ -1,0 +1,57 @@
+[
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\sources\\实践作业\\实践作业1.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\实践作业\\实践作业1.cpp",
+    "original_hash": "02722e8a09e7e0b6a902fa16e19b8be53dca26808723b0fcd818905928099cca"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\sources\\平时作业\\平时作业2-1.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业2-1.cpp",
+    "original_hash": "19c792ace894d0a2db09f5b6d5194d29f23740298ccccccb02d1f89c49146fcd"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\sources\\平时作业\\平时作业2-2.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业2-2.cpp",
+    "original_hash": "ff7019eae40534e96debf3d2163c83ae1a7f586a308a14fb0ba346b847cdb5f4"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\sources\\平时作业\\平时作业3-1.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业3-1.cpp",
+    "original_hash": "1dc1ea69ea4af808d03240d3d67f1a9113ec1a014e218d2e0e6c7179c74daa55"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\sources\\平时作业\\平时作业3-2.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业3-2.cpp",
+    "original_hash": "b5f26858db3590eee1607c311b60d7367e4d017e6abbd2d8347cf36c009f4086"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\sources\\平时作业\\平时作业3-3.cpp",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\平时作业\\平时作业3-3.cpp",
+    "original_hash": "8faeb969052ca706e15ca1b6aa7ec4ef6edb7b60248872f1fbd927c3f39e9e6c"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\config\\cpp-unicode.ps1",
+    "destination": "C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\cpp-unicode.ps1",
+    "original_hash": "a522099e9cc667fd064fa77e2a5d2e405d5119f6d02317ff8d26bc6b38f9a5c2"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\config\\cpp-console.ps1",
+    "destination": "C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\cpp-console.ps1",
+    "original_hash": null
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\config\\settings.json",
+    "destination": "C:\\Users\\12120\\AppData\\Roaming\\Code\\User\\settings.json",
+    "original_hash": "d1651abf6dd8f2ce09b1bb1bb4c26ebaab54f2c502d1b89a9a4bbb0bde0ce0b5"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\config\\parent-launch.json",
+    "destination": "D:\\VS code\\.vscode\\launch.json",
+    "original_hash": "b0075314e6f57328cd7fc601539deeafcf841a6d6b46117c8db12a643f172232"
+  },
+  {
+    "stage": "D:\\VS code\\数据结构与算法\\vscode_only_encoding_20261108\\prepared\\config\\homework-launch.json",
+    "destination": "D:\\VS code\\58125117-吴天宇-第三次作业\\.vscode\\launch.json",
+    "original_hash": "b0075314e6f57328cd7fc601539deeafcf841a6d6b46117c8db12a643f172232"
+  }
+]
